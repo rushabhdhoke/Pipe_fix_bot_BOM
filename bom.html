@@ -61,7 +61,7 @@
                     <div class="text-sm text-gray-600">Suppliers</div>
                 </div>
                 <div class="bg-white rounded-lg shadow p-4">
-                    <div class="text-2xl font-bold text-orange-600">~$1.4K</div>
+                    <div class="text-2xl font-bold text-orange-600">~$1.8K</div>
                     <div class="text-sm text-gray-600">Est. Total</div>
                 </div>
             </div>
