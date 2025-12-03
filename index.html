@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipe Fix Bot - Revolutionizing Water Inspection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        
+        nav {
+            transition: all 0.3s ease;
+        }
+        
+        .sticky-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-card {
+            transition: all 0.3s ease;
+        }
+        
+        .team-card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="smooth-scroll">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold text-white">
+                <span class="bg-white text-purple-600 px-3 py-1 rounded-lg">Pipe</span> Fix Bot
+            </div>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="text-white hover:text-purple-200 transition">Home</a>
+                <a href="#technology" class="text-white hover:text-purple-200 transition">Technology</a>
+                <a href="#market" class="text-white hover:text-purple-200 transition">Market</a>
+                <a href="#team" class="text-white hover:text-purple-200 transition">Team</a>
+                <a href="bom.html" class="text-white hover:text-purple-200 transition">BOM</a>
+                <a href="#contact" class="bg-white text-purple-600 px-6 py-2 rounded-full font-semibold hover:bg-purple-100 transition">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-20 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-20 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 py-20 text-center relative z-10">
+            <h1 class="text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                Revolutionizing<br/>Water Inspection
+            </h1>
+            <p class="text-xl md:text-2xl text-purple-100 mb-12 max-w-3xl mx-auto">
+                Innovative Solutions for Aging Infrastructure with AI-Powered Pipeline Intelligence
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-4 justify-center mb-16">
+                <a href="#technology" class="bg-white text-purple-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-purple-50 transition transform hover:scale-105">
+                    Explore Technology
+                </a>
+                <a href="#contact" class="glass-effect text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-purple-600 transition">
+                    Schedule Demo
+                </a>
+            </div>
+            
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+                <div class="glass-effect rounded-xl p-6">
+                    <div class="text-4xl font-bold text-white mb-2">360°</div>
+                    <div class="text-purple-100">Video Coverage</div>
+                </div>
+                <div class="glass-effect rounded-xl p-6">
+                    <div class="text-4xl font-bold text-white mb-2">8-18"</div>
+                    <div class="text-purple-100">Pipe Range</div>
+                </div>
+                <div class="glass-effect rounded-xl p-6">
+                    <div class="text-4xl font-bold text-white mb-2">$250</div>
+                    <div class="text-purple-100">Per Mile</div>
+                </div>
+                <div class="glass-effect rounded-xl p-6">
+                    <div class="text-4xl font-bold text-white mb-2">AI</div>
+                    <div class="text-purple-100">Defect Detection</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Introducing Pipe Fix Bot</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Complete pipeline assessment in a single pass with cutting-edge sensor technology
+                </p>
+            </div>
+
+            <!-- Key Features Grid -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="text-5xl mb-4">📹</div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">360° Video</h3>
+                    <p class="text-gray-600">Dual pano-spheric cameras capture every angle with pan, tilt, and zoom capability</p>
+                </div>
+                
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="text-5xl mb-4">🎧</div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Hydrophone</h3>
+                    <p class="text-gray-600">Advanced acoustic leak detection pinpoints issues before they become emergencies</p>
+                </div>
+                
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="text-5xl mb-4">📊</div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Ultrasonic UT</h3>
+                    <p class="text-gray-600">Spot ultrasound thickness measurement for precise pipe condition assessment</p>
+                </div>
+                
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="text-5xl mb-4">🤖</div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">AI Analytics</h3>
+                    <p class="text-gray-600">Automated defect detection and severity ranking with asset-grade localization</p>
+                </div>
+                
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="text-5xl mb-4">💧</div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Drinking Water Ready</h3>
+                    <p class="text-gray-600">NSF/ANSI compliant materials safe for potable water systems</p>
+                </div>
+                
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="text-5xl mb-4">🔋</div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Long Battery Life</h3>
+                    <p class="text-gray-600">Extended operation time with high-efficiency power management</p>
+                </div>
+            </div>
+
+            <!-- Robot Features -->
+            <div class="bg-gradient-to-r from-purple-50 to-blue-50 rounded-3xl p-12">
+                <h3 class="text-3xl font-bold text-center mb-12 text-gray-900">Advanced Design Features</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-purple-600 text-white rounded-full p-3 flex-shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">Flexible Joints</h4>
+                            <p class="text-gray-600">Navigate bends and obstacles with adaptive articulation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-purple-600 text-white rounded-full p-3 flex-shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">6x Spring-Loaded Wheels</h4>
+                            <p class="text-gray-600">Maintain traction on varied pipe surfaces and debris</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-purple-600 text-white rounded-full p-3 flex-shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">High-Intensity LEDs</h4>
+                            <p class="text-gray-600">Illumination for clear imaging in dark pipe environments</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-purple-600 text-white rounded-full p-3 flex-shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">Integrated Sensors</h4>
+                            <p class="text-gray-600">9-DoF IMU and odometer for precise positioning</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Section -->
+    <section id="market" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Why Pipe Fix Bot?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Bridging the gap in water infrastructure inspection
+                </p>
+            </div>
+
+            <!-- Problem & Solution -->
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <div class="bg-red-50 rounded-2xl p-8 border-2 border-red-200">
+                    <h3 class="text-2xl font-bold text-red-900 mb-6">Current Challenges</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <span class="text-red-500 text-2xl">•</span>
+                            <span class="text-gray-700"><strong>$3K-$8K</strong> repair costs per line, $10M+ for city-wide programs</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-red-500 text-2xl">•</span>
+                            <span class="text-gray-700"><strong>20% water loss</strong> as non-revenue water (NRW)</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-red-500 text-2xl">•</span>
+                            <span class="text-gray-700">Existing tools can't combine leak detection + wall condition</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-red-500 text-2xl">•</span>
+                            <span class="text-gray-700">Limited access to 8-18" distribution mains</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-green-50 rounded-2xl p-8 border-2 border-green-200">
+                    <h3 class="text-2xl font-bold text-green-900 mb-6">Our Solution</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <span class="text-green-500 text-2xl">✓</span>
+                            <span class="text-gray-700">Preventive inspections combining leak + condition in one pass</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-green-500 text-2xl">✓</span>
+                            <span class="text-gray-700">Precise GIS/CMMS reports ready for dig sheets</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-green-500 text-2xl">✓</span>
+                            <span class="text-gray-700">Simple deployment from standard appurtenances</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-green-500 text-2xl">✓</span>
+                            <span class="text-gray-700">Sized and priced for everyday city mains</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Business Model -->
+            <div class="bg-white rounded-3xl shadow-xl p-12">
+                <h3 class="text-3xl font-bold text-center mb-12 text-gray-900">How Pipe Fix Bot Makes Money</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-gradient-to-br from-purple-100 to-purple-50 rounded-2xl p-8">
+                        <div class="text-4xl mb-4">🚀</div>
+                        <h4 class="text-2xl font-bold mb-4 text-purple-900">Per-Mile Service (Primary)</h4>
+                        <div class="space-y-3 text-gray-700">
+                            <p><strong>What we deliver:</strong> Complete inspection with GIS/CMMS files + dig sheets</p>
+                            <p><strong>Pricing:</strong> $250-$400 per mile, all-in</p>
+                            <p><strong>Benefits:</strong> No capital purchase, predictable spend, faster approvals</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-blue-100 to-blue-50 rounded-2xl p-8">
+                        <div class="text-4xl mb-4">🤖</div>
+                        <h4 class="text-2xl font-bold mb-4 text-blue-900">Robot + SaaS (Secondary)</h4>
+                        <div class="space-y-3 text-gray-700">
+                            <p><strong>Target:</strong> Large utilities with in-house inspection teams</p>
+                            <p><strong>Package:</strong> Robot kit + chargers + hardware</p>
+                            <p><strong>Pricing:</strong> $10K basic + annual SaaS subscription</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Events -->
+            <div class="mt-16">
+                <h3 class="text-3xl font-bold text-center mb-8 text-gray-900">Why This Matters Now</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-red-500">
+                        <h4 class="font-bold text-lg mb-2">Newark, DE (2025)</h4>
+                        <p class="text-gray-600">Water main break led to boil-water advisory for 10,000+ consumers. Residents relied on bottled water until repairs completed.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-red-500">
+                        <h4 class="font-bold text-lg mb-2">Paterson, NJ (2025)</h4>
+                        <p class="text-gray-600">140-year-old main broke 30 feet underground. 200,000 people under boil-water advisory, requiring emergency services for days.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Meet The Team</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Expert roboticists dedicated to transforming water infrastructure
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Rushabh -->
+                <div class="team-card bg-gradient-to-br from-purple-50 to-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-24 h-24 bg-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-3xl font-bold">
+                        RD
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-2">Rushabh Dhoke</h3>
+                    <p class="text-purple-600 text-center font-semibold mb-4">MSc Robotics • Team Lead</p>
+                    <ul class="text-sm text-gray-700 space-y-2">
+                        <li>• Patent holder</li>
+                        <li>• 2 years building & deploying robots</li>
+                        <li>• Featured on UDaily</li>
+                        <li>• Leading UD's first autonomous boat</li>
+                        <li>• Ex-secretary UD-AWRA</li>
+                    </ul>
+                </div>
+
+                <!-- Sneh -->
+                <div class="team-card bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-24 h-24 bg-blue-600 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-3xl font-bold">
+                        SS
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-2">Sneh Shukla</h3>
+                    <p class="text-blue-600 text-center font-semibold mb-4">MSc Robotics</p>
+                    <ul class="text-sm text-gray-700 space-y-2">
+                        <li>• Electrical & Software Engineer</li>
+                        <li>• Robotics & AI Engineer</li>
+                        <li>• 4+ years robotics experience</li>
+                        <li>• 2+ years industrial electrical systems</li>
+                    </ul>
+                </div>
+
+                <!-- Riya -->
+                <div class="team-card bg-gradient-to-br from-pink-50 to-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-24 h-24 bg-pink-600 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-3xl font-bold">
+                        RB
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-2">Riya Baranwal</h3>
+                    <p class="text-pink-600 text-center font-semibold mb-4">MSc Robotics</p>
+                    <ul class="text-sm text-gray-700 space-y-2">
+                        <li>• Mechanical & Product Designer</li>
+                        <li>• 4+ years CAD experience</li>
+                        <li>• 2 years robot perception, mapping & navigation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 hero-gradient relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 right-20 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-5xl font-bold text-white mb-6">Let's Connect</h2>
+            <p class="text-xl text-purple-100 mb-12">
+                Ready to revolutionize your water inspection operations? Get in touch today.
+            </p>
+            
+            <div class="bg-white rounded-2xl p-12 shadow-2xl">
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <input type="text" placeholder="Your Name" class="w-full px-6 py-4 rounded-lg border border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200">
+                        <input type="email" placeholder="Email Address" class="w-full px-6 py-4 rounded-lg border border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200">
+                    </div>
+                    <input type="text" placeholder="Organization" class="w-full px-6 py-4 rounded-lg border border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200">
+                    <textarea placeholder="Tell us about your water inspection needs..." rows="5" class="w-full px-6 py-4 rounded-lg border border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200"></textarea>
+                    <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-blue-700 transition transform hover:scale-105">
+                        Schedule a Demo
+                    </button>
+                </form>
+            </div>
+            
+            <div class="mt-12 text-white">
+                <p class="text-lg mb-4">Or reach out directly:</p>
+                <p class="text-purple-100">📧 info@pipefixbot.com • 📱 (302) 123-4567</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="text-3xl font-bold mb-4">
+                <span class="bg-purple-600 px-3 py-1 rounded-lg">Pipe</span> Fix Bot
+            </div>
+            <p class="text-gray-400 mb-6">Revolutionizing Water Infrastructure Inspection</p>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-white transition">LinkedIn</a>
+                <a href="#" class="text-gray-400 hover:text-white transition">Twitter</a>
+                <a href="#" class="text-gray-400 hover:text-white transition">GitHub</a>
+            </div>
+            <p class="text-gray-500 text-sm">© 2025 Pipe Fix Bot. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Sticky navigation on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('sticky-nav');
+                navbar.classList.remove('hero-gradient');
+            } else {
+                navbar.classList.remove('sticky-nav');
+                navbar.classList.add('hero-gradient');
+            }
+        });
+    </script>
+</body>
+</html>
