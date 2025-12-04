@@ -168,13 +168,21 @@
                 <p class="text-slate-400">See the Pipe Fix Bot navigating real-world environments.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="glass rounded-2xl p-2 group">
-                    <div class="relative overflow-hidden rounded-xl aspect-video bg-black">
-                         <div class="absolute inset-0 flex items-center justify-center">
-                            <span class="text-slate-500">VIDEO: Navigation Test</span>
-                        </div>
-                        </div>
+        <div class="mb-20 reveal">
+                <div class="glass-card rounded-2xl p-8">
+                    <h3 class="text-3xl font-bold mb-6 text-center glow-text accent-cyan">See It In Action</h3>
+                    <div class="video-container">
+                        <!-- YouTube Embed -->
+                        <iframe 
+                            src="https://www.youtube.com/embed/JCFyHhPYi_4" 
+                            title="Pipe Fix Bot Demo" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen
+                            class="rounded-lg">
+                        </iframe>
+                    </div>
+                
                     <div class="p-4">
                         <h3 class="text-xl font-bold text-white">Autonomous Navigation</h3>
                         <p class="text-sm text-slate-400">Navigating 90-degree bends in 12" PVC.</p>
@@ -225,9 +233,9 @@
                 
                 <div class="glass rounded-2xl p-8 hover:-translate-y-2 transition duration-300">
                     <div class="w-14 h-14 rounded-xl bg-blue-500/20 flex items-center justify-center mb-6 text-3xl">📊</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Ultrasonic Thickness</h3>
+                    <h3 class="text-xl font-bold text-white mb-3">Ultrasonic</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">
-                        Spot UT measurements to determine remaining wall thickness and corrosion levels.
+                        Spot UT measurements to determine remaining corrosion levels.
                     </p>
                 </div>
                 
@@ -295,6 +303,46 @@
         </div>
     </section>
 
+<!-- Market Section -->
+    <section id="market" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-5xl md:text-6xl font-black mb-4">
+                    <span class="glow-text accent-blue">Why</span> Pipe Fix Bot?
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Bridging the gap in water infrastructure inspection
+                </p>
+            </div>
+    <!-- Business Model -->
+            <div class="glass-card rounded-3xl p-12 reveal">
+                <h3 class="text-3xl font-bold text-center mb-12 glow-text accent-cyan">How Pipe Fix Bot Makes Money</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="glass-card rounded-2xl p-8 border border-blue-500/30">
+                        <div class="text-5xl mb-4">🚀</div>
+                        <h4 class="text-2xl font-bold mb-4 accent-blue">Per-Mile Service (Primary)</h4>
+                        <div class="space-y-3 text-gray-300">
+                            <p><strong class="accent-cyan">What we deliver:</strong> Complete inspection with GIS/CMMS files + dig sheets</p>
+                            <p><strong class="accent-cyan">Pricing:</strong> $250-$400 per mile, all-in</p>
+                            <p><strong class="accent-cyan">Benefits:</strong> No capital purchase, predictable spend, faster approvals</p>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card rounded-2xl p-8 border border-purple-500/30">
+                        <div class="text-5xl mb-4">🤖</div>
+                        <h4 class="text-2xl font-bold mb-4 accent-purple">Robot + SaaS (Secondary)</h4>
+                        <div class="space-y-3 text-gray-300">
+                            <p><strong class="accent-pink">Target:</strong> Large utilities with in-house inspection teams</p>
+                            <p><strong class="accent-pink">Package:</strong> Robot kit + chargers + hardware</p>
+                            <p><strong class="accent-pink">Pricing:</strong> $10K basic + annual SaaS subscription</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>        
+        
+
     <section id="team" class="py-24 relative z-10">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <h2 class="text-4xl font-bold text-white mb-16">Meet the Innovators</h2>
@@ -305,27 +353,29 @@
                         <img src="assets/team-rushabh.jpg" onerror="this.src='https://placehold.co/200x200/581c87/FFF?text=RD'" class="w-full h-full object-cover">
                     </div>
                     <h3 class="text-xl font-bold text-white">Rushabh Dhoke</h3>
-                    <p class="text-brand-purple font-medium mb-4">Team Lead & Robotics</p>
+                    <p class="text-brand-purple font-medium mb-4">Team Lead and Inventor</p>
                     <p class="text-sm text-slate-400">MSc Robotics. Patent holder with 2+ years in autonomous systems deployment.</p>
-                </div>
-
-                <div class="glass rounded-2xl p-8 hover:bg-white/5 transition group">
-                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-brand-blue/30 group-hover:border-brand-blue transition">
-                         <img src="assets/team-sneh.jpg" onerror="this.src='https://placehold.co/200x200/0369a1/FFF?text=SS'" class="w-full h-full object-cover">
-                    </div>
-                    <h3 class="text-xl font-bold text-white">Sneh Shukla</h3>
-                    <p class="text-brand-blue font-medium mb-4">AI & Electrical Lead</p>
-                    <p class="text-sm text-slate-400">MSc Robotics. Specialist in industrial electrical systems and computer vision.</p>
                 </div>
 
                 <div class="glass rounded-2xl p-8 hover:bg-white/5 transition group">
                     <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-pink-500/30 group-hover:border-pink-500 transition">
                          <img src="assets/team-riya.jpg" onerror="this.src='https://placehold.co/200x200/be185d/FFF?text=RB'" class="w-full h-full object-cover">
                     </div>
-                    <h3 class="text-xl font-bold text-white">Riya Baranwal</h3>
+                    <h3 class="text-xl font-bold text-white">Sneh Shukla</h3>
                     <p class="text-pink-500 font-medium mb-4">Mechanical Design</p>
                     <p class="text-sm text-slate-400">MSc Robotics. 4+ years CAD experience. Robot perception and mapping expert.</p>
                 </div>
+
+                <div class="glass rounded-2xl p-8 hover:bg-white/5 transition group">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-brand-blue/30 group-hover:border-brand-blue transition">
+                         <img src="assets/team-sneh.jpg" onerror="this.src='https://placehold.co/200x200/0369a1/FFF?text=SS'" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Riya Baranwal</h3>
+                    <p class="text-brand-blue font-medium mb-4">AI & Electrical Lead</p>
+                    <p class="text-sm text-slate-400">MSc Robotics. Specialist in industrial electrical systems and computer vision.</p>
+                </div>
+
+                
             </div>
         </div>
     </section>
