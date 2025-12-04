@@ -18,9 +18,7 @@
             100% { transform: translate(0px, 0px) scale(1); }
         }
 
-        .blob {
-            animation: float 7s infinite;
-        }
+        .blob { animation: float 7s infinite; }
         .delay-2000 { animation-delay: 2s; }
         .delay-4000 { animation-delay: 4s; }
 
@@ -30,28 +28,50 @@
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
         }
         
         .glass:hover {
             background: rgba(30, 41, 59, 0.6);
             border: 1px solid rgba(56, 189, 248, 0.3); /* Cyan border on hover */
             box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+            transform: translateY(-2px);
+        }
+
+        /* Video Container for Responsive 16:9 Aspect Ratio */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 1rem;
+            background: #000;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Scroll Reveal Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0f172a; 
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #334155; 
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #38bdf8; 
-        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
     </style>
     <script>
         tailwind.config = {
@@ -88,9 +108,10 @@
             
             <div class="hidden md:flex space-x-8 items-center font-medium">
                 <a href="#home" class="hover:text-brand-blue transition">Home</a>
-                <a href="#demo" class="hover:text-brand-blue transition">Live Demo</a>
+                <a href="#demo" class="hover:text-brand-blue transition">Demo</a>
                 <a href="#technology" class="hover:text-brand-blue transition">Tech</a>
                 <a href="#market" class="hover:text-brand-blue transition">Impact</a>
+                <a href="#business" class="hover:text-brand-blue transition">Business</a>
                 <a href="bom.html" class="hover:text-brand-blue transition">BOM</a>
                 <a href="#contact" class="px-5 py-2 rounded-full bg-white/5 hover:bg-brand-blue/20 border border-white/10 hover:border-brand-blue/50 text-white transition-all">
                     Contact Team
@@ -102,7 +123,7 @@
     <section id="home" class="relative min-h-screen flex items-center pt-20">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
             
-            <div class="text-left space-y-8">
+            <div class="text-left space-y-8 reveal active">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-blue text-sm font-semibold">
                     <span class="relative flex h-2 w-2">
                       <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-blue opacity-75"></span>
@@ -146,12 +167,10 @@
                 </div>
             </div>
 
-            <div class="relative group">
+            <div class="relative group reveal active">
                 <div class="absolute -inset-1 bg-gradient-to-r from-brand-blue to-brand-purple rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
-                
                 <div class="relative rounded-2xl overflow-hidden glass aspect-[4/3] flex items-center justify-center bg-black/50">
                     <img src="assets/robot-hero.png" onerror="this.src='https://placehold.co/800x600/1e293b/FFF?text=Pipe+Fix+Bot+Render'" alt="Pipe Fix Bot" class="w-full h-full object-cover transform transition duration-700 group-hover:scale-105">
-                    
                     <div class="absolute bottom-6 left-6 glass px-4 py-2 rounded-lg flex items-center gap-3">
                         <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                         <span class="text-white font-mono text-sm">System Online</span>
@@ -163,43 +182,36 @@
 
     <section id="demo" class="py-24 relative z-10">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 reveal">
                 <h2 class="text-4xl font-bold text-white mb-4">Field Action & Testing</h2>
                 <p class="text-slate-400">See the Pipe Fix Bot navigating real-world environments.</p>
             </div>
 
-        <div class="mb-20 reveal">
-                <div class="glass-card rounded-2xl p-8">
-                    <h3 class="text-3xl font-bold mb-6 text-center glow-text accent-cyan">See It In Action</h3>
-                    <div class="video-container">
-                        <!-- YouTube Embed -->
+            <div class="grid md:grid-cols-3 gap-8 reveal">
+                <div class="md:col-span-2 glass rounded-2xl p-6">
+                    <h3 class="text-2xl font-bold mb-6 text-center text-brand-blue">See It In Action</h3>
+                    <div class="video-container shadow-2xl">
                         <iframe 
                             src="https://www.youtube.com/embed/JCFyHhPYi_4" 
                             title="Pipe Fix Bot Demo" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen
-                            class="rounded-lg">
+                            allowfullscreen>
                         </iframe>
-                    </div>
-                
-                    <div class="p-4">
-                        <h3 class="text-xl font-bold text-white">Autonomous Navigation</h3>
-                        <p class="text-sm text-slate-400">Navigating 90-degree bends in 12" PVC.</p>
                     </div>
                 </div>
 
                 <div class="grid grid-rows-2 gap-4">
                     <div class="glass rounded-2xl p-2 flex items-center relative overflow-hidden group">
-                        <img src="assets/feature-leak.jpg" onerror="this.src='https://placehold.co/600x300/1e293b/FFF?text=Leak+Detection+Viz'" class="w-full h-full object-cover rounded-xl opacity-60 group-hover:opacity-100 transition">
-                        <div class="absolute bottom-4 left-4">
-                            <h4 class="text-white font-bold">Acoustic Leak Detection</h4>
+                        <img src="assets/feature-leak.jpg" onerror="this.src='https://placehold.co/600x300/1e293b/FFF?text=Leak+Detection'" class="w-full h-full object-cover rounded-xl opacity-60 group-hover:opacity-100 transition">
+                        <div class="absolute bottom-4 left-4 bg-black/50 px-3 py-1 rounded-lg backdrop-blur-sm">
+                            <h4 class="text-white font-bold text-sm">Acoustic Leak Detection</h4>
                         </div>
                     </div>
                     <div class="glass rounded-2xl p-2 flex items-center relative overflow-hidden group">
-                        <img src="assets/feature-interface.png" onerror="this.src='https://placehold.co/600x300/1e293b/FFF?text=User+Interface'" class="w-full h-full object-cover rounded-xl opacity-60 group-hover:opacity-100 transition">
-                        <div class="absolute bottom-4 left-4">
-                            <h4 class="text-white font-bold">Real-time GIS Mapping</h4>
+                        <img src="assets/feature-interface.png" onerror="this.src='https://placehold.co/600x300/1e293b/FFF?text=GIS+Mapping'" class="w-full h-full object-cover rounded-xl opacity-60 group-hover:opacity-100 transition">
+                        <div class="absolute bottom-4 left-4 bg-black/50 px-3 py-1 rounded-lg backdrop-blur-sm">
+                            <h4 class="text-white font-bold text-sm">Real-time GIS Mapping</h4>
                         </div>
                     </div>
                 </div>
@@ -209,58 +221,46 @@
 
     <section id="technology" class="py-24 relative z-10">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="mb-16">
+            <div class="mb-16 reveal">
                 <span class="text-brand-blue font-bold tracking-wider uppercase text-sm">Our Technology</span>
                 <h2 class="text-4xl md:text-5xl font-bold text-white mt-2">Multi-Sensor Intelligence</h2>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="glass rounded-2xl p-8 hover:-translate-y-2 transition duration-300">
+            <div class="grid md:grid-cols-3 gap-6 reveal">
+                <div class="glass rounded-2xl p-8">
                     <div class="w-14 h-14 rounded-xl bg-brand-blue/20 flex items-center justify-center mb-6 text-3xl">📹</div>
                     <h3 class="text-xl font-bold text-white mb-3">360° Vision</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Dual pano-spheric cameras capture complete pipe interiors. No blind spots, full pan/tilt/zoom in post-processing.
-                    </p>
+                    <p class="text-slate-400 text-sm leading-relaxed">Dual pano-spheric cameras capture complete pipe interiors. No blind spots, full pan/tilt/zoom.</p>
                 </div>
                 
-                <div class="glass rounded-2xl p-8 hover:-translate-y-2 transition duration-300">
+                <div class="glass rounded-2xl p-8">
                     <div class="w-14 h-14 rounded-xl bg-brand-purple/20 flex items-center justify-center mb-6 text-3xl">🎧</div>
                     <h3 class="text-xl font-bold text-white mb-3">Hydrophone Array</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Sensitive acoustic sensors identify leak frequencies often missed by external correlators.
-                    </p>
+                    <p class="text-slate-400 text-sm leading-relaxed">Sensitive acoustic sensors identify leak frequencies often missed by external correlators.</p>
                 </div>
                 
-                <div class="glass rounded-2xl p-8 hover:-translate-y-2 transition duration-300">
+                <div class="glass rounded-2xl p-8">
                     <div class="w-14 h-14 rounded-xl bg-blue-500/20 flex items-center justify-center mb-6 text-3xl">📊</div>
                     <h3 class="text-xl font-bold text-white mb-3">Ultrasonic</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Spot UT measurements to determine remaining corrosion levels.
-                    </p>
+                    <p class="text-slate-400 text-sm leading-relaxed">Spot UT measurements to determine remaining wall thickness and corrosion levels.</p>
                 </div>
                 
-                <div class="glass rounded-2xl p-8 hover:-translate-y-2 transition duration-300">
+                <div class="glass rounded-2xl p-8">
                     <div class="w-14 h-14 rounded-xl bg-green-500/20 flex items-center justify-center mb-6 text-3xl">🤖</div>
                     <h3 class="text-xl font-bold text-white mb-3">AI Defect Detection</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Automated computer vision ranks severity of cracks, corrosion, and root intrusion.
-                    </p>
+                    <p class="text-slate-400 text-sm leading-relaxed">Automated computer vision ranks severity of cracks, corrosion, and root intrusion.</p>
                 </div>
 
                 <div class="md:col-span-2 glass rounded-2xl p-8 flex flex-col md:flex-row items-center gap-8">
                     <div class="flex-1">
                         <h3 class="text-2xl font-bold text-white mb-4">Built for Drinking Water</h3>
-                        <p class="text-slate-400 mb-6">
-                            Constructed with NSF/ANSI 61 compliant materials. Our robot is thoroughly sanitized and safe for potable water distribution networks.
-                        </p>
+                        <p class="text-slate-400 mb-6">Constructed with NSF/ANSI 61 compliant materials. Our robot is thoroughly sanitized and safe for potable water.</p>
                         <ul class="space-y-2">
                             <li class="flex items-center text-sm text-slate-300">
-                                <svg class="w-5 h-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                                Zero Contamination Risk
+                                <span class="text-green-400 mr-2">✓</span> Zero Contamination Risk
                             </li>
                             <li class="flex items-center text-sm text-slate-300">
-                                <svg class="w-5 h-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                                Easy Deployment via Hydrants
+                                <span class="text-green-400 mr-2">✓</span> Easy Deployment via Hydrants
                             </li>
                         </ul>
                     </div>
@@ -274,25 +274,23 @@
 
     <section id="market" class="py-24 bg-black/20 relative z-10">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="grid md:grid-cols-2 gap-16 items-center reveal">
                 <div>
                     <h2 class="text-4xl font-bold text-white mb-6">Why It Matters</h2>
                     <p class="text-lg text-slate-400 mb-8">
-                        Aging infrastructure is a ticking time bomb. Cities like Newark and Philadelphia face massive disruptions due to water main breaks that could be predicted.
+                        Aging infrastructure is a ticking time bomb. Cities like Newark and Philadelphia face massive disruptions due to water main breaks.
                     </p>
-                    
                     <div class="space-y-4">
                         <div class="glass p-6 rounded-xl border-l-4 border-red-500">
                             <h4 class="text-white font-bold text-lg">The Cost of Inaction</h4>
-                            <p class="text-slate-400 text-sm mt-1">$10M+ spent annually on emergency repairs in mid-sized cities. 20% of treated water lost before reaching customers.</p>
+                            <p class="text-slate-400 text-sm mt-1">$10M+ spent annually on emergency repairs in mid-sized cities.</p>
                         </div>
                         <div class="glass p-6 rounded-xl border-l-4 border-brand-blue">
                             <h4 class="text-white font-bold text-lg">The PipeFix Advantage</h4>
-                            <p class="text-slate-400 text-sm mt-1">Preventive maintenance at <span class="text-brand-blue font-bold">1/10th</span> the cost of emergency replacement. Actionable data ready for your GIS.</p>
+                            <p class="text-slate-400 text-sm mt-1">Preventive maintenance at <span class="text-brand-blue font-bold">1/10th</span> the cost of emergency replacement.</p>
                         </div>
                     </div>
                 </div>
-                
                 <div class="relative">
                     <div class="absolute -inset-4 bg-brand-purple/20 blur-2xl rounded-full"></div>
                     <div class="glass rounded-2xl p-2 relative">
@@ -303,58 +301,56 @@
         </div>
     </section>
 
-<!-- Market Section -->
-    <section id="market" class="py-20 relative">
+    <section id="business" class="py-20 relative">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16 reveal">
-                <h2 class="text-5xl md:text-6xl font-black mb-4">
-                    <span class="glow-text accent-blue">Why</span> Pipe Fix Bot?
+                <h2 class="text-5xl md:text-6xl font-black mb-4 text-white">
+                    <span class="text-brand-blue">Why</span> Pipe Fix Bot?
                 </h2>
                 <p class="text-xl text-gray-400 max-w-3xl mx-auto">
                     Bridging the gap in water infrastructure inspection
                 </p>
             </div>
-    <!-- Business Model -->
-            <div class="glass-card rounded-3xl p-12 reveal">
-                <h3 class="text-3xl font-bold text-center mb-12 glow-text accent-cyan">How Pipe Fix Bot Makes Money</h3>
+            
+            <div class="glass rounded-3xl p-12 reveal">
+                <h3 class="text-3xl font-bold text-center mb-12 text-white">How We Create Value</h3>
                 <div class="grid md:grid-cols-2 gap-8">
-                    <div class="glass-card rounded-2xl p-8 border border-blue-500/30">
+                    <div class="glass rounded-2xl p-8 border border-brand-blue/30 hover:bg-brand-blue/5 transition">
                         <div class="text-5xl mb-4">🚀</div>
-                        <h4 class="text-2xl font-bold mb-4 accent-blue">Per-Mile Service (Primary)</h4>
+                        <h4 class="text-2xl font-bold mb-4 text-brand-blue">Per-Mile Service (Primary)</h4>
                         <div class="space-y-3 text-gray-300">
-                            <p><strong class="accent-cyan">What we deliver:</strong> Complete inspection with GIS/CMMS files + dig sheets</p>
-                            <p><strong class="accent-cyan">Pricing:</strong> $250-$400 per mile, all-in</p>
-                            <p><strong class="accent-cyan">Benefits:</strong> No capital purchase, predictable spend, faster approvals</p>
+                            <p><strong class="text-brand-blue">Deliverable:</strong> Complete inspection with GIS/CMMS files + dig sheets</p>
+                            <p><strong class="text-brand-blue">Pricing:</strong> $250-$400 per mile, all-in</p>
+                            <p><strong class="text-brand-blue">Benefits:</strong> No capital purchase, predictable spend</p>
                         </div>
                     </div>
                     
-                    <div class="glass-card rounded-2xl p-8 border border-purple-500/30">
+                    <div class="glass rounded-2xl p-8 border border-brand-purple/30 hover:bg-brand-purple/5 transition">
                         <div class="text-5xl mb-4">🤖</div>
-                        <h4 class="text-2xl font-bold mb-4 accent-purple">Robot + SaaS (Secondary)</h4>
+                        <h4 class="text-2xl font-bold mb-4 text-brand-purple">Robot + SaaS (Secondary)</h4>
                         <div class="space-y-3 text-gray-300">
-                            <p><strong class="accent-pink">Target:</strong> Large utilities with in-house inspection teams</p>
-                            <p><strong class="accent-pink">Package:</strong> Robot kit + chargers + hardware</p>
-                            <p><strong class="accent-pink">Pricing:</strong> $10K basic + annual SaaS subscription</p>
+                            <p><strong class="text-brand-purple">Target:</strong> Large utilities with in-house teams</p>
+                            <p><strong class="text-brand-purple">Package:</strong> Robot kit + chargers + hardware</p>
+                            <p><strong class="text-brand-purple">Pricing:</strong> $10K basic + annual SaaS subscription</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>        
-        
 
     <section id="team" class="py-24 relative z-10">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold text-white mb-16">Meet the Innovators</h2>
+            <h2 class="text-4xl font-bold text-white mb-16 reveal">Meet the Innovators</h2>
             
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-3 gap-8 reveal">
                 <div class="glass rounded-2xl p-8 hover:bg-white/5 transition group">
                     <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-brand-purple/30 group-hover:border-brand-purple transition">
                         <img src="assets/team-rushabh.jpg" onerror="this.src='https://placehold.co/200x200/581c87/FFF?text=RD'" class="w-full h-full object-cover">
                     </div>
                     <h3 class="text-xl font-bold text-white">Rushabh Dhoke</h3>
                     <p class="text-brand-purple font-medium mb-4">Team Lead and Inventor</p>
-                    <p class="text-sm text-slate-400">MSc Robotics. Patent holder with 2+ years in autonomous systems deployment.</p>
+                    <p class="text-sm text-slate-400">MSc Robotics. Patent holder with 2+ years in autonomous systems.</p>
                 </div>
 
                 <div class="glass rounded-2xl p-8 hover:bg-white/5 transition group">
@@ -363,7 +359,7 @@
                     </div>
                     <h3 class="text-xl font-bold text-white">Sneh Shukla</h3>
                     <p class="text-pink-500 font-medium mb-4">Mechanical Design</p>
-                    <p class="text-sm text-slate-400">MSc Robotics. 4+ years CAD experience. Robot perception and mapping expert.</p>
+                    <p class="text-sm text-slate-400">MSc Robotics. CAD experience.</p>
                 </div>
 
                 <div class="glass rounded-2xl p-8 hover:bg-white/5 transition group">
@@ -371,18 +367,16 @@
                          <img src="assets/team-sneh.jpg" onerror="this.src='https://placehold.co/200x200/0369a1/FFF?text=SS'" class="w-full h-full object-cover">
                     </div>
                     <h3 class="text-xl font-bold text-white">Riya Baranwal</h3>
-                    <p class="text-brand-blue font-medium mb-4">AI & Electrical Lead</p>
-                    <p class="text-sm text-slate-400">MSc Robotics. Specialist in industrial electrical systems and computer vision.</p>
+                    <p class="text-brand-blue font-medium mb-4">Electrical Lead</p>
+                    <p class="text-sm text-slate-400">MSc Robotics. Specialist in industrial electrical systems.</p>
                 </div>
-
-                
             </div>
         </div>
     </section>
 
     <section id="contact" class="py-24 relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-t from-brand-blue/20 to-transparent pointer-events-none"></div>
-        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
             <h2 class="text-5xl font-bold text-white mb-8">Ready to Inspect?</h2>
             <div class="glass rounded-3xl p-10 md:p-16">
                 <form class="space-y-6 text-left">
@@ -419,6 +413,7 @@
     </footer>
 
     <script>
+        // Navbar blur on scroll
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
             if (window.scrollY > 20) {
@@ -427,6 +422,22 @@
                 nav.classList.remove('bg-dark/80', 'backdrop-blur-md', 'shadow-lg');
             }
         });
+
+        // Scroll Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Trigger once on load
+        reveal();
     </script>
 </body>
 </html>
